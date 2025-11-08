@@ -1,0 +1,22 @@
+name: BasicSpawn
+version: 1.0
+main: de.creativedm.basicspawn.BasicSpawn
+author: CreativeDM
+description: Simple Spawn Plugin with Countdown
+
+commands:
+  setspawn:
+    description: Setzt den Spawn-Punkt
+    usage: /setspawn
+    permission: basicspawn.edit
+  spawn:
+    description: Teleportiert dich zum Spawn
+    usage: /spawn
+
+permissions:
+  basicspawn.edit:
+    description: Erlaubt das Setzen des Spawns
+    default: op
+  basicspawn.instant:
+    description: Erlaubt sofortigen Teleport ohne Countdown
+    default: op

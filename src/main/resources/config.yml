@@ -1,0 +1,34 @@
+# BasicSpawn Configuration
+# Erstellt von CreativeDM
+
+# Countdown in Sekunden bevor der Spieler teleportiert wird
+countdown: 3
+
+# Effekte
+effects:
+  # Partikel während des Countdowns (weiße Sterne spiralförmig)
+  countdown-particles: true
+  
+  # Partikel nach dem Teleport (Explosion am Boden)
+  teleport-particles: true
+  
+  # Sound nach dem Teleport (Enderperlen-Sound)
+  teleport-sound: true
+
+# Nachrichten (nutze & für Color Codes)
+messages:
+  # Nachricht beim Setzen des Spawns
+  spawn-set: '&7Der &bSpawn&7 wurde erfolgreich gesetzt'
+  
+  # Nachricht während des Countdowns (Variable: %time%, %player%)
+  teleport-countdown: '&7Du wirst in &3%time%&7 Sekunden zum &bSpawn&7 teleportiert'
+  
+  # Nachricht nach erfolgreicher Teleportation
+  teleport-success: '&7Du wurdest zum &bSpawn&7 teleportiert'
+  
+  # Nachricht bei Instant-Teleport
+  teleport-instant: '&7Du wurdest &asofort&7 zum &bSpawn&7 teleportiert'
+  
+  # Fehlermeldungen
+  no-spawn-set: '&cEs ist kein Spawn gesetzt. Melde dich bei unserem Team'
+  no-permission: '&7Du hast keine &cRechte &7für den Befehl'
