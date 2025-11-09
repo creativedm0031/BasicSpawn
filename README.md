@@ -16,6 +16,7 @@ Es ermöglicht Spielern eine stilvolle Teleportation zum festgelegten Spawn-Punk
 * Countdown-Dauer frei einstellbar
 * unterstützt Platzhalter wie `%player%` und `%time%`
 * Chat bleibt frei, alle Anzeigen über Actionbar
+* Teleportieren beim Betreten des Servers
 
 ---
 
