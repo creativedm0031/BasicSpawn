@@ -1,34 +1,49 @@
-# BasicSpawn Configuration
-# Erstellt von CreativeDM
+# ╔═══════════════════════════════════════════════════════════════╗
+# ║                    BasicSpawn Configuration                   ║
+# ║                      Erstellt von CreativeDM                  ║
+# ╚═══════════════════════════════════════════════════════════════╝
+
+# ┌─────────────────────────────────────────────────────────────┐
+# │                     ALLGEMEINE EINSTELLUNGEN                  │
+# └─────────────────────────────────────────────────────────────┘
 
 # Countdown in Sekunden bevor der Spieler teleportiert wird
 countdown: 3
 
-# Effekte
+# Teleportiere Spieler automatisch beim Join zum Spawn
+# Bei deaktiviertem Spawn erhalten Admins eine Warnung
+teleport-on-join: true
+
+# ┌─────────────────────────────────────────────────────────────┐
+# │                     EFFEKTE & PARTIKEL                        │
+# └─────────────────────────────────────────────────────────────┘
+
 effects:
-  # Partikel während des Countdowns (weiße Sterne spiralförmig)
+  # Spiralförmige Partikel während des Countdowns (weiße Sterne)
   countdown-particles: true
   
-  # Partikel nach dem Teleport (Explosion am Boden)
+  # Explosionspartikel nach erfolgreicher Teleportation
   teleport-particles: true
   
-  # Sound nach dem Teleport (Enderperlen-Sound)
+  # Enderperlen-Sound beim Teleport
   teleport-sound: true
 
-# Nachrichten (nutze & für Color Codes)
+# ┌─────────────────────────────────────────────────────────────┐
+# │                         NACHRICHTEN                           │
+# │            Nutze & für Color Codes (z.B. &a, &c)             │
+# │         Verfügbare Variablen: %player%, %time%                │
+# └─────────────────────────────────────────────────────────────┘
+
 messages:
-  # Nachricht beim Setzen des Spawns
+  # ─── Admin Nachrichten ───
   spawn-set: '&7Der &bSpawn&7 wurde erfolgreich gesetzt'
+  admin-no-spawn-warning: '&c&lWARNUNG: &cKein Spawn gesetzt! &7Nutze &e/setspawn'
   
-  # Nachricht während des Countdowns (Variable: %time%, %player%)
+  # ─── Teleport Nachrichten ───
   teleport-countdown: '&7Du wirst in &3%time%&7 Sekunden zum &bSpawn&7 teleportiert'
-  
-  # Nachricht nach erfolgreicher Teleportation
   teleport-success: '&7Du wurdest zum &bSpawn&7 teleportiert'
-  
-  # Nachricht bei Instant-Teleport
   teleport-instant: '&7Du wurdest &asofort&7 zum &bSpawn&7 teleportiert'
   
-  # Fehlermeldungen
+  # ─── Fehler & Warnungen ───
   no-spawn-set: '&cEs ist kein Spawn gesetzt. Melde dich bei unserem Team'
   no-permission: '&7Du hast keine &cRechte &7für den Befehl'

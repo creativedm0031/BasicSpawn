@@ -6,17 +6,8 @@ import org.bukkit.entity.Player;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-/**
- * Utility-Klasse für Nachrichten mit voller 1.8-1.21 Kompatibilität
- */
 public class MessageUtil {
 
-    /**
-     * Sendet eine Actionbar-Nachricht an einen Spieler (funktioniert für 1.8-1.21)
-     * 
-     * @param player Der Spieler
-     * @param message Die Nachricht (mit & Color Codes)
-     */
     public static void sendActionbar(Player player, String message) {
         String colored = colorize(message);
         
@@ -30,9 +21,6 @@ public class MessageUtil {
         }
     }
 
-    /**
-     * Legacy Actionbar für 1.8-1.10 via Reflection
-     */
     private static void sendActionbarLegacy(Player player, String message) {
         try {
             String version = player.getClass().getPackage().getName().split("\\.")[3];
@@ -57,25 +45,11 @@ public class MessageUtil {
         }
     }
 
-    /**
-     * Konvertiert & Color Codes zu § Minecraft Codes
-     * 
-     * @param text Text mit & Codes
-     * @return Text mit § Codes
-     */
     public static String colorize(String text) {
         if (text == null) return "";
         return ChatColor.translateAlternateColorCodes('&', text);
     }
 
-    /**
-     * Ersetzt Variablen in einem Text
-     * 
-     * @param text Der Text
-     * @param player Der Spieler (für %player%)
-     * @param countdown Der Countdown (für %time%)
-     * @return Text mit ersetzten Variablen
-     */
     public static String replaceVariables(String text, Player player, int countdown) {
         return text
             .replace("%player%", player.getName())

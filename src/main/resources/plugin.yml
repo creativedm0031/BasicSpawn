@@ -1,5 +1,5 @@
 name: BasicSpawn
-version: 1.0
+version: 1.1
 main: de.creativedm.basicspawn.BasicSpawn
 author: CreativeDM
 description: Simple Spawn Plugin with Countdown

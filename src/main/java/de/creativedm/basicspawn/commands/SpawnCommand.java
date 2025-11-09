@@ -11,9 +11,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-/**
- * Command Handler für /spawn
- */
 public class SpawnCommand implements CommandExecutor {
 
     private final BasicSpawn plugin;
@@ -106,20 +103,17 @@ public class SpawnCommand implements CommandExecutor {
                 
                 if (countdownParticles) {
                     ParticleUtil.playCountdownParticles(player, particleHeight);
-                    particleHeight -= (2.0 / (countdownSeconds * 20.0 / 4.0));
+                    particleHeight -= (2.0 / countdownSeconds);
                     if (particleHeight < 0) particleHeight = 2.0;
                 }
 
                 timeLeft--;
             }
-        }.runTaskTimer(plugin, 0L, 4L);
+        }.runTaskTimer(plugin, 0L, 20L);
 
         return true;
     }
 
-    /**
-     * Lädt die Spawn Location aus der Config
-     */
     private Location getSpawnLocation() {
         try {
             String worldName = plugin.getConfig().getString("spawn.world");

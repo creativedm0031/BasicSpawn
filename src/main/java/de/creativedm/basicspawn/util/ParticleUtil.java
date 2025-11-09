@@ -5,18 +5,8 @@ import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
-/**
- * Utility-Klasse für Partikel und Sound-Effekte (1.13-1.21 kompatibel)
- */
 public class ParticleUtil {
 
-    /**
-     * Spielt Spiralpartikel um den Spieler herum (für Countdown)
-     * Weiße Sternen-Partikel von oben nach unten
-     * 
-     * @param player Der Spieler
-     * @param height Aktuelle Höhe der Spirale (0.0 = unten, 2.0 = oben)
-     */
     public static void playCountdownParticles(Player player, double height) {
         Location loc = player.getLocation();
         
@@ -43,11 +33,6 @@ public class ParticleUtil {
         }
     }
 
-    /**
-     * Spielt Explosions-Partikel am Boden beim Spawn
-     * 
-     * @param location Die Location am Spawn
-     */
     public static void playTeleportExplosion(Location location) {
         Location groundLoc = location.clone();
         groundLoc.setY(location.getY() + 0.1);
@@ -85,11 +70,6 @@ public class ParticleUtil {
         }
     }
 
-    /**
-     * Spielt Enderperlen-Teleport Sound
-     * 
-     * @param player Der Spieler
-     */
     public static void playTeleportSound(Player player) {
         try {
             player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
